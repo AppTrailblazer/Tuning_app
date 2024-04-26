@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/export_file"
+        android:title="@string/menu_option_export_to_file" />
+    <item
+        android:id="@+id/export_share"
+        android:title="@string/menu_option_export_share" />
+
+</menu>

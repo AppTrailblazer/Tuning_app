@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="use_alphabetic">true</bool>
+
+    <string name="alphabetic_a">A</string>
+    <string name="alphabetic_b">H</string>
+    <string name="alphabetic_c">C</string>
+    <string name="alphabetic_d">D</string>
+    <string name="alphabetic_e">E</string>
+    <string name="alphabetic_f">F</string>
+    <string name="alphabetic_g">G</string>
+</resources>

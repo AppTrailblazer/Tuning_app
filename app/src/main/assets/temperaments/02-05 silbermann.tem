@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-attenuated-meantone-silbermann",
+    "name": "1/6 SC \"Attenuated\" Meantone (Silbermann)",
+    "year": "1714",
+    "category": "MEANTONE",
+    "comma": "SC",
+    "offsets": {
+        "A": 0,
+        "A#": 8.1469,
+        "B": -3.25876,
+        "C": 4.88814,
+        "C#": -6.51752,
+        "D": 1.62938,
+        "D#": 9.77628,
+        "E": -1.62938,
+        "F": 6.51752,
+        "F#": -4.88814,
+        "G": 3.25876,
+        "G#": -8.1469
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="use_alphabetic">false</bool>
+
+    <string name="solmization_do">Ντο</string>
+    <string name="solmization_re">Ρε</string>
+    <string name="solmization_mi">Μι</string>
+    <string name="solmization_fa">Φα</string>
+    <string name="solmization_sol">Σολ</string>
+    <string name="solmization_la">Λα</string>
+    <string name="solmization_si">Σι</string>
+</resources>

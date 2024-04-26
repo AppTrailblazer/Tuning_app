@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="use_alphabetic">true</bool>
+    <bool name="sharp_after_note">true</bool>
+    <string name="sign_sharp">#</string>
+    <integer name="sharp_vertical_position">-1</integer>
+</resources>

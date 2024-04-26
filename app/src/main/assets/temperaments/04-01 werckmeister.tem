@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-werckmeister",
+    "name": "Werckmeister III",
+    "year": "1691",
+    "category": "WELL",
+    "comma": "PC",
+    "offsets": {
+        "A": 0,
+        "A#": 7.82,
+        "B": 3.91,
+        "C": 11.73001,
+        "C#": 1.955,
+        "D": 3.91,
+        "D#": 5.865,
+        "E": 1.955,
+        "F": 9.775,
+        "F#": 0,
+        "G": 7.82,
+        "G#": 3.91
+    }
+}

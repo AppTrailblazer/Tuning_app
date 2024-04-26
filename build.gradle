@@ -1,0 +1,23 @@
+buildscript {
+    ext {
+        compileSdk = 34
+        minSdkVersion = 21
+        targetSdkVersion = 33
+        jvmTarget = 11
+        jvmToolchain = 17
+    }
+}
+
+plugins {
+    alias(libs.plugins.versions)
+    alias(libs.plugins.catalogUpdate)
+    alias(libs.plugins.kotlin) apply(false)
+    alias(libs.plugins.kotlinKsp) apply(false)
+    alias(libs.plugins.firebaseCrashlytics) apply false
+    alias(libs.plugins.googleServices) apply false
+    alias(libs.plugins.hilt) apply false
+    alias(libs.plugins.androidApp) apply false
+    alias(libs.plugins.androidLibrary) apply false
+}
+
+apply from: "gradle/scripts/depUpdates.gradle"

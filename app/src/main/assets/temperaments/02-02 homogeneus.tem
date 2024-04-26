@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-homogeneus-meantone",
+    "name": "1/5 SC \"Homogeneus\" Meantone",
+    "year": "1523",
+    "category": "MEANTONE",
+    "comma": "SC",
+    "offsets": {
+        "A": 0,
+        "A#": 11.73129,
+        "B": -4.69251,
+        "C": 7.03877,
+        "C#": -9.38503,
+        "D": 2.34626,
+        "D#": 14.07754,
+        "E": -2.34626,
+        "F": 9.38503,
+        "F#": -7.03877,
+        "G": 4.69251,
+        "G#": -11.7313
+    }
+}

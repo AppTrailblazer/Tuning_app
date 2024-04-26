@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-standard-just",
+    "name": "Standard Just",
+    "year": "1529",
+    "category": "PYTHAGOREAN/JUST",
+    "comma": "SC",
+    "offsets": {
+        "A": 0,
+        "A#": 11.73129,
+        "B": 3.91,
+        "C": 15.64129,
+        "C#": -13.6863,
+        "D": -1.955,
+        "D#": 31.28257,
+        "E": 1.955,
+        "F": 13.68629,
+        "F#": -15.6413,
+        "G": 17.59629,
+        "G#": -11.7313
+    }
+}

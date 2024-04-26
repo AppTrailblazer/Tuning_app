@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="use_alphabetic">false</bool>
+    <string name="sign_sharp">#</string>
+
+    <string name="solmization_do">دو</string>
+    <string name="solmization_re">ري</string>
+    <string name="solmization_mi">مي</string>
+    <string name="solmization_fa">ف</string>
+    <string name="solmization_sol">صول</string>
+    <string name="solmization_la">لا</string>
+    <string name="solmization_si">سي</string>
+</resources>

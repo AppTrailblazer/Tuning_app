@@ -1,0 +1,504 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listTuningSettings"
+    android:clipToPadding="false"
+    android:paddingBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/listItemTuningSettingMake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?listPreferredItemHeight"
+            android:paddingStart="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingTop="@dimen/tuning_settings_list_item_padding_vertical"
+            android:paddingEnd="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingBottom="@dimen/tuning_settings_list_item_padding_vertical">
+
+            <TextView
+                android:id="@+id/listItemTuningSettingMakeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_tile_make"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            <TextView
+                android:id="@+id/listItemTuningSettingMakeValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/white"
+                android:textDirection="locale"
+                android:textSize="@dimen/tuning_settings_list_item_text_size"
+                tools:text="Yamaha" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_divider" />
+
+        <LinearLayout
+            android:id="@+id/listItemTuningSettingModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?listPreferredItemHeight"
+            android:paddingStart="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingTop="@dimen/tuning_settings_list_item_padding_vertical"
+            android:paddingEnd="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingBottom="@dimen/tuning_settings_list_item_padding_vertical">
+
+            <TextView
+                android:id="@+id/listItemTuningSettingModelLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_tile_model"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            <TextView
+                android:id="@+id/listItemTuningSettingModelValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/white"
+                android:textDirection="locale"
+                android:textSize="@dimen/tuning_settings_list_item_text_size"
+                tools:text="T116" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_divider" />
+
+        <LinearLayout
+            android:id="@+id/listItemTuningSettingCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?listPreferredItemHeight"
+            android:paddingStart="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingTop="@dimen/tuning_settings_list_item_padding_vertical"
+            android:paddingEnd="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingBottom="@dimen/tuning_settings_list_item_padding_vertical">
+
+            <TextView
+                android:id="@+id/listItemTuningSettingCustomerNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_tile_customer_name"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            <TextView
+                android:id="@+id/listItemTuningSettingCustomerNameValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/white"
+                android:textDirection="locale"
+                android:textSize="@dimen/tuning_settings_list_item_text_size"
+                tools:text="John Doe" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_divider" />
+
+        <LinearLayout
+            android:id="@+id/listItemTuningSettingSerial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?listPreferredItemHeight"
+            android:paddingStart="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingTop="@dimen/tuning_settings_list_item_padding_vertical"
+            android:paddingEnd="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingBottom="@dimen/tuning_settings_list_item_padding_vertical">
+
+            <TextView
+                android:id="@+id/listItemTuningSettingSerialLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_tile_serial"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            <TextView
+                android:id="@+id/listItemTuningSettingSerialValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/white"
+                android:textDirection="locale"
+                android:textSize="@dimen/tuning_settings_list_item_text_size"
+                tools:text="Y001" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_divider" />
+
+        <LinearLayout
+            android:id="@+id/listItemTuningSettingType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?listPreferredItemHeight"
+            android:paddingStart="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingEnd="@dimen/tuning_settings_list_item_padding_horizontal">
+
+            <TextView
+                android:id="@+id/listItemTuningSettingTypeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_tile_type"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            <TextView
+                android:id="@+id/listItemTuningSettingTypeValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/tuning_settings_list_item_padding_vertical"
+                android:layout_marginBottom="@dimen/tuning_settings_list_item_padding_vertical"
+                android:layout_weight="1"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/white"
+                android:textDirection="locale"
+                android:textSize="@dimen/tuning_settings_list_item_text_size"
+                tools:text="Studio Upright" />
+
+            <ImageView
+                android:id="@+id/listItemTuningSettingTypeImage"
+                android:layout_width="@dimen/tuning_settings_list_item_image_width"
+                android:layout_height="@dimen/tuning_settings_list_item_image_height"
+                android:layout_marginStart="8dp"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:visibility="visible"
+                tools:background="@drawable/piano_type_item_bg_pressed"
+                tools:src="@drawable/ic_piano_studio_upright" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_divider" />
+
+        <LinearLayout
+            android:id="@+id/listItemTuningSettingPitchOffset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?listPreferredItemHeight"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingTop="@dimen/tuning_settings_list_item_padding_vertical"
+            android:paddingEnd="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingBottom="@dimen/tuning_settings_list_item_padding_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/listItemTuningSettingPitchOffsetLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_tile_pitch_offset"
+                    android:textAppearance="?android:textAppearanceListItem"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                <TextView
+                    android:id="@+id/listItemTuningSettingPitchOffsetValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:textAlignment="gravity"
+                    android:textColor="@android:color/white"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/tuning_settings_list_item_text_size"
+                    tools:text="A= 400.0 Hz 0.00 cents" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listItemTuningSettingPitchOffsetLock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/listItemTuningSettingPitchOffsetLockIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/list_item_icon_height"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_lock" />
+
+                <TextView
+                    android:id="@+id/listItemTuningSettingPitchOffsetLockPlan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/app_plan_lock_plus"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_divider" />
+
+        <LinearLayout
+            android:id="@+id/listItemTuningSettingTemperament"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?listPreferredItemHeight"
+            android:paddingStart="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingTop="@dimen/tuning_settings_list_item_padding_vertical"
+            android:paddingEnd="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingBottom="@dimen/tuning_settings_list_item_padding_vertical">
+
+            <TextView
+                android:id="@+id/listItemTuningSettingTemperamentLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_tile_temperament"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            <TextView
+                android:id="@+id/listItemTuningSettingTemperamentValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/white"
+                android:textDirection="locale"
+                android:textSize="@dimen/tuning_settings_list_item_text_size"
+                tools:text="Equal" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_divider" />
+
+        <LinearLayout
+            android:id="@+id/listItemTuningSettingTuningStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?listPreferredItemHeight"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingTop="@dimen/tuning_settings_list_item_padding_vertical"
+            android:paddingEnd="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingBottom="@dimen/tuning_settings_list_item_padding_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/listItemTuningSettingTuningStyleLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_tile_tuning_style"
+                    android:textAppearance="?android:textAppearanceListItem"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                <TextView
+                    android:id="@+id/listItemTuningSettingTuningStyleValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:textAlignment="gravity"
+                    android:textColor="@android:color/white"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/tuning_settings_list_item_text_size"
+                    tools:text="Default" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listItemTuningSettingTuningStyleLock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/listItemTuningSettingTuningStyleLockIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/list_item_icon_height"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_lock" />
+
+                <TextView
+                    android:id="@+id/listItemTuningSettingTuningStyleLockPlan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/app_plan_lock_pro"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_divider" />
+
+        <LinearLayout
+            android:id="@+id/listItemTuningSettingLowestUnwoundString"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?listPreferredItemHeight"
+            android:paddingStart="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingTop="@dimen/tuning_settings_list_item_padding_vertical"
+            android:paddingEnd="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingBottom="@dimen/tuning_settings_list_item_padding_vertical">
+
+            <TextView
+                android:id="@+id/listItemTuningSettingLowestUnwoundStringLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_tile_lowest_unwound_string"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            <TextView
+                android:id="@+id/listItemTuningSettingLowestUnwoundStringValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/white"
+                android:textDirection="locale"
+                android:textSize="@dimen/tuning_settings_list_item_text_size"
+                tools:text="D3" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_divider" />
+
+        <LinearLayout
+            android:id="@+id/listItemTuningSettingNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?listPreferredItemHeight"
+            android:paddingStart="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingTop="@dimen/tuning_settings_list_item_padding_vertical"
+            android:paddingEnd="@dimen/tuning_settings_list_item_padding_horizontal"
+            android:paddingBottom="@dimen/tuning_settings_list_item_padding_vertical">
+
+            <TextView
+                android:id="@+id/listItemTuningSettingNotesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_tile_notes"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            <TextView
+                android:id="@+id/listItemTuningSettingNotesValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/white"
+                android:textDirection="locale"
+                android:textSize="@dimen/tuning_settings_list_item_text_size"
+                tools:text="Notes for the tuning file" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_divider" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,27 @@
+<resources>
+
+    <dimen name="file_name_margin_top">8dp</dimen>
+    <dimen name="file_name_margin_right">6dp</dimen>
+
+    <dimen name="indicator_text_size">32sp</dimen>
+    <dimen name="indicator_text_size2">20sp</dimen>
+
+    <dimen name="wheel_margin">0dp</dimen>
+
+    <dimen name="graph_width">362dp</dimen>
+    <dimen name="graph_top_margin">22dp</dimen>
+    <dimen name="graph_height">64dp</dimen>
+    <dimen name="keyboard_height">38dp</dimen>
+
+    <dimen name="keyboard_bottom">8dp</dimen>
+    <dimen name="modes_bottom">20dp</dimen>
+    <dimen name="lock_left">35dp</dimen>
+
+    <dimen name="keyboard_margin">64dp</dimen>
+    <dimen name="settings_left">50dp</dimen>
+
+    <dimen name="calibrate_wheel_margin">0dp</dimen>
+
+    <dimen name="pitch_raise_keys_selection_key_height">90dp</dimen>
+
+</resources>

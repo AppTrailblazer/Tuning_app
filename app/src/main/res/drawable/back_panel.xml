@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:dither="true"
+            android:src="@drawable/back_panel_texture"
+            android:tileMode="repeat" />
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:endColor="#3b2e2119"
+                android:gradientRadius="@dimen/wheel_width"
+                android:startColor="#3becd4c2"
+                android:type="radial" />
+        </shape>
+    </item>
+</layer-list>

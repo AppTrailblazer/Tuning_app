@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-extended-meantone-zarlino",
+    "name": "2/7 SC \"Extended\" Meantone (Zarlino)",
+    "year": "1558",
+    "category": "MEANTONE",
+    "comma": "SC",
+    "offsets": {
+        "A": 0,
+        "A#": 20.94827,
+        "B": -8.37931,
+        "C": 12.56896,
+        "C#": -16.7586,
+        "D": 4.18965,
+        "D#": 25.13792,
+        "E": -4.18965,
+        "F": 16.75861,
+        "F#": -12.569,
+        "G": 8.37931,
+        "G#": -20.9483
+    }
+}

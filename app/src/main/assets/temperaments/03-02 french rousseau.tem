@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-standard-french-dalembert-rousseau",
+    "name": "Standard French D'Alembert/Rousseau",
+    "year": "1765",
+    "category": "FRENCH/MODIFIED MEANTONE",
+    "comma": "SC",
+    "offsets": {
+        "A": 0,
+        "A#": 4.15521,
+        "B": -6.84314,
+        "C": 10.26471,
+        "C#": -8.30971,
+        "D": 3.42157,
+        "D#": -2.20021,
+        "E": -3.42157,
+        "F": 8.30971,
+        "F#": -10.2647,
+        "G": 6.84314,
+        "G#": -6.35471
+    }
+}

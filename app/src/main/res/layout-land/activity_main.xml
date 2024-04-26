@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tuning_wheel"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        app:srcCompat="?attr/appThemeBackPanelSource" />
+
+    <com.willeypianotuning.toneanalyzer.ui.main.views.TuningWheelView
+        android:id="@+id/tuning_wheel"
+        android:layout_width="@dimen/wheel_width"
+        android:layout_height="@dimen/wheel_width"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/wheel_margin"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/topPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tuning_wheel"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/cover_margin"
+        tools:scaleType="fitXY"
+        tools:src="?attr/appThemeTopPanelSource" />
+
+    <com.willeypianotuning.toneanalyzer.ui.main.views.NoteInfoView
+        android:id="@+id/noteInfo"
+        android:layout_width="@dimen/indicator_width"
+        android:layout_height="@dimen/indicator_width"
+        android:layout_alignTop="@+id/topPanel"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/indicator_margin" />
+
+    <FrameLayout
+        android:id="@+id/topSink"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/noteInfo"
+        android:layout_alignParentTop="false" />
+
+    <ImageButton
+        android:id="@+id/prevNoteButton"
+        android:layout_width="@dimen/step_note_button_width"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/noteInfo"
+        android:layout_alignBottom="@+id/noteInfo"
+        android:layout_marginRight="-5dp"
+        android:layout_toLeftOf="@+id/noteInfo"
+        android:alpha="0"
+        android:background="#00616161"
+        android:contentDescription="-1"
+        android:layoutDirection="ltr"
+        android:paddingLeft="@dimen/step_note_button_padding"
+        android:paddingRight="@dimen/step_note_button_padding"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_next_arrow_left"
+        tools:alpha="1"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageButton
+        android:id="@+id/prevOctaveButton"
+        android:layout_width="@dimen/step_octave_button_width"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/noteInfo"
+        android:layout_alignBottom="@+id/noteInfo"
+        android:layout_toLeftOf="@+id/prevNoteButton"
+        android:alpha="0"
+        android:background="#00616161"
+        android:contentDescription="-12"
+        android:layoutDirection="ltr"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_next2_arrow_left"
+        tools:alpha="1"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageButton
+        android:id="@+id/nextNoteButton"
+        android:layout_width="@dimen/step_note_button_width"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/noteInfo"
+        android:layout_alignBottom="@+id/noteInfo"
+        android:layout_marginLeft="-5dp"
+        android:layout_toRightOf="@+id/noteInfo"
+        android:alpha="0"
+        android:background="#00616161"
+        android:contentDescription="+1"
+        android:layoutDirection="ltr"
+        android:paddingLeft="@dimen/step_note_button_padding"
+        android:paddingRight="@dimen/step_note_button_padding"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_next_arrow_right"
+        tools:alpha="1"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageButton
+        android:id="@+id/nextOctaveButton"
+        android:layout_width="@dimen/step_octave_button_width"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/noteInfo"
+        android:layout_alignBottom="@+id/noteInfo"
+        android:layout_toRightOf="@+id/nextNoteButton"
+        android:alpha="0"
+        android:background="#00616161"
+        android:contentDescription="+12"
+        android:layoutDirection="ltr"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_next2_arrow_right"
+        tools:alpha="1"
+        tools:ignore="RtlHardcoded" />
+
+    <com.willeypianotuning.toneanalyzer.ui.main.views.PianoKeyboardView
+        android:id="@+id/pianoKeyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/keyboard_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/keyboard_margin"
+        android:layout_marginRight="@dimen/keyboard_margin"
+        android:layout_marginBottom="@dimen/keyboard_bottom"
+        app:pv_borderWidth="@dimen/margin_charts"
+        app:pv_currentNote="48" />
+
+    <com.willeypianotuning.toneanalyzer.ui.main.views.NoteSwitchModeSelector
+        android:id="@+id/modesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/noteInfo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="@dimen/modes_left"
+        android:layout_marginBottom="@dimen/modes_seekbar_margin"
+        android:tint="@color/note_switching_color"
+        app:ns_showLabel="false" />
+
+    <ImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="@dimen/actionbar_height"
+        android:layout_height="@dimen/actionbar_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#00616161"
+        android:padding="@dimen/menu_button_padding"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_button_menu" />
+
+    <ImageButton
+        android:id="@+id/playDurationButton"
+        android:layout_width="@dimen/ic_button_height"
+        android:layout_height="@dimen/ic_button_height"
+        android:layout_alignTop="@+id/playToneButton"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/playToneButton"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_button_tone_duration" />
+
+    <ImageButton
+        android:id="@+id/playToneButton"
+        android:layout_width="@dimen/ic_button_height"
+        android:layout_height="@dimen/ic_button_height"
+        android:layout_above="@+id/lockInharmonicityButton"
+        android:layout_marginBottom="8dp"
+        android:layout_alignEnd="@+id/lockInharmonicityButton"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_button_tone_off" />
+
+    <ImageButton
+        android:id="@+id/toneLevelsButton"
+        android:layout_width="@dimen/ic_button_height"
+        android:layout_height="@dimen/ic_button_height"
+        android:layout_alignBottom="@+id/lockInharmonicityButton"
+        android:layout_toStartOf="@+id/lockInharmonicityButton"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_tone_levels" />
+
+    <ImageButton
+        android:id="@+id/lockInharmonicityButton"
+        android:layout_width="@dimen/ic_button_height"
+        android:layout_height="@dimen/ic_button_height"
+        android:layout_alignBottom="@+id/modesLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/modes_left"
+        android:layout_marginBottom="@dimen/modes_left"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_button_ear" />
+
+    <TextView
+        android:id="@+id/pitchRaiseModeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tuningInfoBoxTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_rectangle_light"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/activity_main_exit_pitch_raise"
+        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+        android:textSize="@dimen/list_item_text_size"
+        android:visibility="gone"
+        tools:text="EXIT PITCH RAISE"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/pitchRaiseMeasurementHintTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pitchRaiseModeButton"
+        android:layout_alignStart="@+id/pitchRaiseModeButton"
+        android:layout_alignEnd="@+id/pitchRaiseModeButton"
+        android:gravity="end"
+        android:text="@string/pitch_raise_pre_measurement_hint"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/chartsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pianoKeyboard"
+        android:layout_below="@+id/noteInfo"
+        android:layout_alignStart="@+id/pianoKeyboard"
+        android:layout_alignEnd="@+id/pianoKeyboard"
+        android:layout_marginTop="@dimen/graph_top_margin"
+        android:background="?attr/appThemeChartsBackground"
+        android:padding="0dp">
+
+        <com.willeypianotuning.toneanalyzer.ui.main.views.NotePointerView
+            android:id="@+id/currentNotePointer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:np_borderWidth="@dimen/margin_charts"
+            app:np_currentNote="48" />
+
+        <com.willeypianotuning.toneanalyzer.ui.views.LockableViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_charts"
+            android:layout_marginTop="@dimen/margin_charts"
+            android:layout_marginEnd="@dimen/margin_charts"
+            android:layout_marginBottom="@dimen/margin_charts">
+
+            <LinearLayout
+                android:id="@+id/frequencyChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/deltaChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/bChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:visibility="visible" />
+
+        </com.willeypianotuning.toneanalyzer.ui.views.LockableViewPager>
+
+        <ImageButton
+            android:id="@+id/right_button"
+            android:layout_width="@dimen/charts_arrows_layout_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:alpha="0"
+            android:background="@color/transparent"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_arrow_right"
+            tools:alpha="1" />
+
+        <ImageButton
+            android:id="@+id/left_button"
+            android:layout_width="@dimen/charts_arrows_layout_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:alpha="0"
+            android:background="@color/transparent"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_arrow_left"
+            tools:alpha="1" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tuningInfoBoxTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/file_name_margin"
+        android:layout_marginEnd="@dimen/file_name_margin_right"
+        android:background="@drawable/files_search_field_bg"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/ring_label_text_size"
+        tools:text="file name.cde" />
+
+    <include
+        android:id="@+id/mainMenu"
+        layout="@layout/activity_main_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone" />
+
+</RelativeLayout>

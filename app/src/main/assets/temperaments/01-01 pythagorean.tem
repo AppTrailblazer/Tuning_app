@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-pythagorean",
+    "name": "Pythagorean",
+    "year": "500 BC",
+    "category": "PYTHAGOREAN/JUST",
+    "comma": "PC",
+    "offsets": {
+        "A": 0,
+        "A#": -9.775,
+        "B": 3.91,
+        "C": -5.865,
+        "C#": 7.82,
+        "D": -1.955,
+        "D#": -11.73,
+        "E": 1.955,
+        "F": -7.82,
+        "F#": 5.865,
+        "G": -3.91,
+        "G#": 9.775
+    }
+}

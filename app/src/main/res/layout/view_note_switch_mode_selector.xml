@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/white"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <View
+        android:layout_width="@dimen/modes_bg_margin"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/modes"
+        android:layout_alignBottom="@+id/modes"
+        android:layout_marginStart="@dimen/modes_seekbar_margin"
+        android:layout_marginTop="@dimen/modes_bg_margin"
+        android:layout_marginBottom="@dimen/modes_bg_margin"
+        android:background="@drawable/slider_bg" />
+
+    <LinearLayout
+        android:id="@+id/modes"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/modes_height"
+        android:layout_marginStart="@dimen/modes_seekbar_margin"
+        android:layout_marginTop="@dimen/modes_vertical_margin"
+        android:layout_marginBottom="@dimen/modes_vertical_margin"
+        android:layout_toEndOf="@+id/modeSlider"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/noteSwitchModeAutoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/note_switching_mode_auto"
+                android:textAllCaps="true"
+                android:textSize="@dimen/modes_item_text_size"
+                android:textStyle="bold"
+                tools:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/noteSwitchModeAutoIcon"
+                android:layout_width="@dimen/modes_item_image_size"
+                android:layout_height="@dimen/modes_item_image_size"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/ic_note_switching_auto"
+                tools:tint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/noteSwitchModeStepText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/note_switching_mode_step"
+                android:textAllCaps="true"
+                android:textSize="@dimen/modes_item_text_size"
+                android:textStyle="bold"
+                tools:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/noteSwitchModeStepIcon"
+                android:layout_width="@dimen/modes_item_image_size"
+                android:layout_height="@dimen/modes_item_image_size"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/ic_note_switching_step"
+                tools:tint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/noteSwitchModeLockText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/note_switching_mode_lock"
+                android:textAllCaps="true"
+                android:textSize="@dimen/modes_item_text_size"
+                android:textStyle="bold"
+                tools:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/noteSwitchModeLockIcon"
+                android:layout_width="@dimen/modes_item_image_size"
+                android:layout_height="@dimen/modes_item_image_size"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/ic_note_switching_lock"
+                tools:tint="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/modes"
+        android:layout_alignEnd="@+id/modes"
+        android:layout_alignBottom="@+id/modes"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/noteSwitchModeAuto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/noteSwitchModeStep"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/noteSwitchModeLock"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <com.willeypianotuning.toneanalyzer.ui.main.views.ModeSlider
+        android:id="@+id/modeSlider"
+        android:layout_width="@dimen/modes_seekbar_width"
+        android:layout_height="@dimen/modes_seekbar_height"
+        app:srcCompat="@drawable/ic_mode_pointer" />
+
+</merge>

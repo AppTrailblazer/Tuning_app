@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <ImageView
+        android:id="@+id/iconCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:srcCompat="@drawable/ic_check_white_24dp" />
+
+    <TextView
+        android:id="@+id/planOptionTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@+id/iconCheck"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:textAlignment="gravity"
+        android:textColor="#ffffff"
+        android:textDirection="locale"
+        android:textSize="@dimen/plan_option_title_text_size"
+        app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp"
+        tools:text="Tune limited range of notes" />
+
+    <TextView
+        android:id="@+id/planOptionDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/planOptionTitleTextView"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@+id/iconCheck"
+        android:textAlignment="gravity"
+        android:textDirection="locale"
+        tools:text="Tuning functionality for select sample notes only. Evaluate if a piano is roughly in tune using the graph at the bottom" />
+
+</merge>

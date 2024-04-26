@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    tools:context="com.willeypianotuning.toneanalyzer.ui.upgrade.UpgradeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"
+        android:minHeight="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="#2A2520"
+                app:cardCornerRadius="6dp"
+                app:cardUseCompatPadding="true"
+                app:elevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/plan_free_title"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/plan_card_title_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/plan_free_subtitle"
+                        android:textSize="@dimen/plan_card_subtitle_text_size" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.upgrade.PlanOptionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#302b25"
+                        app:po_description="@string/free_plan_option_mid_range_tuning_description"
+                        app:po_enabled="true"
+                        app:po_title="@string/free_plan_option_mid_range_tuning"
+                        tools:po_expanded="true" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.upgrade.PlanOptionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:po_description="@string/free_plan_option_automatic_note_switching_description"
+                        app:po_enabled="true"
+                        app:po_title="@string/free_plan_option_automatic_note_switching"
+                        tools:po_expanded="true" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/plusPlanCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="#2A2520"
+                app:cardCornerRadius="6dp"
+                app:cardUseCompatPadding="true"
+                app:elevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/plan_plus_title"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/files_item_title_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/plan_plus_subtitle"
+                        android:textSize="@dimen/plan_card_subtitle_text_size" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.upgrade.PlanOptionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#302b25"
+                        app:po_description="@string/plus_plan_option_tune_entire_piano_description"
+                        app:po_title="@string/plus_plan_option_tune_entire_piano"
+                        tools:po_expanded="true" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.upgrade.PlanOptionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:po_description="@string/plus_plan_option_unequal_temperament_description"
+                        app:po_title="@string/plus_plan_option_unequal_temperament"
+                        tools:po_expanded="true" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.upgrade.PlanOptionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#302b25"
+                        app:po_description="@string/plus_plan_option_change_a_frequency_description"
+                        app:po_title="@string/plus_plan_option_change_a_frequency"
+                        tools:po_expanded="true" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.upgrade.PlanOptionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:po_description="@string/plus_plan_option_calibrate_device_description"
+                        app:po_title="@string/plus_plan_option_calibrate_device"
+                        tools:po_expanded="true" />
+
+                    <LinearLayout
+                        android:id="@+id/upgrade_plus_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="#22FFFFFF"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/ic_button_height"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/plusPurchaseUpgradeText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/activity_upgrade_action_upgrade_to_plus"
+                            android:textAllCaps="true"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/plusPurchasePriceText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            tools:text="One time purchase of US$25" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/proPlanCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="#2A2520"
+                app:cardCornerRadius="6dp"
+                app:cardUseCompatPadding="true"
+                app:elevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/plan_pro_title"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/files_item_title_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/plan_pro_subtitle"
+                        android:textSize="@dimen/plan_card_subtitle_text_size" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.upgrade.PlanOptionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#302b25"
+                        app:po_description="@string/pro_plan_option_everything_from_plus_description"
+                        app:po_title="@string/pro_plan_option_everything_from_plus"
+                        tools:po_expanded="true" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.upgrade.PlanOptionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:po_description="@string/pro_plan_option_tuning_files_description"
+                        app:po_title="@string/pro_plan_option_tuning_files"
+                        tools:po_expanded="true" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.upgrade.PlanOptionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#302b25"
+                        app:po_description="@string/pro_plan_option_pitch_raise_description"
+                        app:po_title="@string/pro_plan_option_pitch_raise"
+                        tools:po_expanded="true" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.upgrade.PlanOptionView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:po_description="@string/pro_plan_option_tuning_styles_description"
+                        app:po_title="@string/pro_plan_option_tuning_styles"
+                        tools:po_expanded="true" />
+
+                    <LinearLayout
+                        android:id="@+id/upgrade_pro_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="#22FFFFFF"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/ic_button_height"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/proPurchaseUpgradeText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/activity_upgrade_action_upgrade_to_pro"
+                            android:textAllCaps="true"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/proPurchasePriceText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            tools:text="One time purchase of US$100" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/upgrade_pro_subscription_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="#22FFFFFF"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/ic_button_height"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/proSubscriptionUpgradeText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/activity_upgrade_action_subscribe_to_pro"
+                            android:textAllCaps="true"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/proSubscriptionPriceText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            tools:text="US$35 paid yearly" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/promoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/temperament_category_background"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textSize="@dimen/files_item_sub_text_size"
+        android:visibility="gone"
+        tools:text="LAST CHANCE. We will be increasing prices at the end of April 2020, upgrade now to avoid paying more later"
+        tools:visibility="visible" />
+
+</LinearLayout>

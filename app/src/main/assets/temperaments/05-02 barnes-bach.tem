@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-barnes-bach",
+    "name": "Barnes-Bach",
+    "year": "1979",
+    "category": "OTHER",
+    "comma": "PC",
+    "offsets": {
+        "A": 0,
+        "A#": 5.865,
+        "B": 0,
+        "C": 5.865,
+        "C#": 0,
+        "D": 1.955,
+        "D#": 3.91,
+        "E": -1.955,
+        "F": 7.82,
+        "F#": -1.955,
+        "G": 3.91,
+        "G#": 1.955
+    }
+}

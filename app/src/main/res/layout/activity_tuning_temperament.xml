@@ -1,0 +1,538 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    tools:context="com.willeypianotuning.toneanalyzer.ui.tuning.TuningSettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_color"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="-1dp"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/temperamentNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/temperament_label_name"
+                android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+            <EditText
+                android:id="@+id/temperamentNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/temperament_edit_text_background"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:maxLines="2"
+                android:textAlignment="gravity"
+                android:textColor="@drawable/selector_temperament_offset_color"
+                android:textDirection="locale"
+                android:textSize="@dimen/tuning_settings_list_item_text_size"
+                tools:text="Temperament name" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/aNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="A"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/aNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="4" />
+
+                    <TextView
+                        android:id="@+id/cSharpNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="C#"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/cSharpNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="4" />
+
+                    <TextView
+                        android:id="@+id/fNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="F"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/fNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/aSharpNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="A#"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/aSharpNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="4" />
+
+                    <TextView
+                        android:id="@+id/dNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="D"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/dNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="4" />
+
+                    <TextView
+                        android:id="@+id/fSharpNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="F#"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/fSharpNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/bNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="B"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/bNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="4" />
+
+                    <TextView
+                        android:id="@+id/dSharpNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="D#"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/dSharpNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="4" />
+
+                    <TextView
+                        android:id="@+id/gNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="G"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/gNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/cNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="C"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/cNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="4" />
+
+                    <TextView
+                        android:id="@+id/eNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="E"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/eNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="4" />
+
+                    <TextView
+                        android:id="@+id/gSharpNoteTemperamentLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:text="G#"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                    <EditText
+                        android:id="@+id/gSharpNoteTemperamentOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@drawable/temperament_edit_text_background"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="@drawable/selector_temperament_offset_color"
+                        android:textSize="@dimen/tuning_settings_list_item_text_size" />
+
+                </LinearLayout>
+
+                <com.willeypianotuning.toneanalyzer.ui.tuning.temperament.TemperamentChartView
+                    android:id="@+id/temperamentChartView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:innerData="@array/temperament_chart_inner_circle"
+                    app:middleData="@array/temperament_chart_middle_circle"
+                    app:noteCircleRadius="17dp"
+                    app:noteTextSize="16sp"
+                    app:offsetHighTextColor="@color/temperament_chart_high_value_color"
+                    app:offsetTextSize="13sp"
+                    app:outerData="@array/temperament_chart_outer_circle" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/toolbar_color"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/load_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_load"
+            app:drawableTopCompat="@drawable/ic_files_open" />
+
+        <TextView
+            android:id="@+id/new_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_add"
+            app:drawableTopCompat="@drawable/ic_files_new" />
+
+        <TextView
+            android:id="@+id/save_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/action_save"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:drawableTopCompat="@drawable/ic_files_save" />
+
+        <TextView
+            android:id="@+id/delete_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_delete"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:drawableTopCompat="@drawable/ic_files_delete" />
+
+    </LinearLayout>
+
+</RelativeLayout>

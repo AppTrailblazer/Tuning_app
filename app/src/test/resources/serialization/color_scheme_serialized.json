@@ -1,0 +1,22 @@
+{
+  "graphBackground": "#FFECE9E1",
+  "spectrumLine": "#FF000000",
+  "topPanel": "#00000000",
+  "tuningCurveLine": "#FF000000",
+  "strobeBackground": "#FFF6F6E8",
+  "autoStepLock": "#FF46413E",
+  "backPanel": "#FF47382E",
+  "noteName": "#FFFFFFFF",
+  "noteNameBackground": "#FF4A3636",
+  "strobeWheels": "#FF000000",
+  "tuningCurveDots": "#FF0000FF",
+  "inharmonicityDots": "#FF0000FF",
+  "menuMainColor": "#FF443930",
+  "menuText": "#FFFFFFFF",
+  "autoStepLockLand": "#FFFAFAEC",
+  "currentNoteIndicator": "#FFFF0000",
+  "dialMarkings": "#00000000",
+  "innerAndOuterRings": "#00000000",
+  "needle": "#00000000",
+  "inharmonicityLine": "#FF0000FF"
+}

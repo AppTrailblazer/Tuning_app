@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/files_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:minHeight="?listPreferredItemHeight"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+
+    <CheckBox
+        android:id="@+id/files_list_item_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <ImageView
+        android:id="@+id/files_list_item_image"
+        android:layout_width="@dimen/files_item_image_width"
+        android:layout_height="@dimen/files_item_image_height"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/files_list_item_checkbox"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        tools:background="@drawable/piano_type_item_bg_pressed"
+        tools:src="@drawable/ic_piano_studio_upright" />
+
+    <TextView
+        android:id="@+id/files_list_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@+id/files_list_item_image"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textAlignment="gravity"
+        android:textColor="@android:color/white"
+        android:textDirection="locale"
+        android:textSize="@dimen/files_item_title_text_size"
+        tools:text="File name" />
+
+    <TextView
+        android:id="@+id/files_list_item_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/files_list_item_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="6dp"
+        android:layout_toStartOf="@+id/files_list_item_date"
+        android:layout_toEndOf="@+id/files_list_item_image"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAlignment="gravity"
+        android:textColor="@android:color/white"
+        android:textDirection="locale"
+        android:textSize="@dimen/files_item_sub_text_size"
+        tools:text="This this the old piano of my client Albert" />
+
+    <TextView
+        android:id="@+id/files_list_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/files_list_item_author"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/files_item_sub_text_size"
+        tools:text="Jan 1, 2018" />
+
+</RelativeLayout>

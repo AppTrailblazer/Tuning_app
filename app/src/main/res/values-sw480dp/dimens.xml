@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Wheel & dial assembly-->
+    <dimen name="wheel_width">456dp</dimen>
+    <dimen name="cover_margin">-228dp</dimen>
+    <dimen name="wheel_width_calibrate">380dp</dimen>
+    <dimen name="cover_margin_calibrate">-190dp</dimen>
+    <dimen name="indicator_width">152dp</dimen>
+    <dimen name="indicator_width_calibration">143dp</dimen>
+    <dimen name="indicator_margin">-76dp</dimen>
+    <dimen name="indicator_text_size">50sp</dimen>
+    <dimen name="indicator_text_size2">33sp</dimen>
+    <dimen name="indicator_text_margin">-11dp</dimen>
+    <dimen name="ring_stroke_size">18dp</dimen>
+    <dimen name="ring_label_text_size">16sp</dimen>
+    <dimen name="ring1_radius">151dp</dimen>
+    <dimen name="ring2_radius">130dp</dimen>
+    <dimen name="ring3_radius">109dp</dimen>
+    <dimen name="ring4_radius">88dp</dimen>
+    <dimen name="arrow_width">185dp</dimen>
+    <dimen name="arrow_margin">43dp</dimen>
+    <dimen name="step_note_button_width">65dp</dimen>
+    <dimen name="step_octave_button_width">78dp</dimen>
+    <dimen name="step_note_button_padding">11dp</dimen>
+    <dimen name="dial_ring_padding">7dp</dimen>
+    <!--Buttons and margins-->
+    <dimen name="ic_button_height">51dp</dimen>
+    <dimen name="ic_button_inner_margin_bot">11dp</dimen>
+    <dimen name="ic_button_inner_margin_top">6dp</dimen>
+    <dimen name="file_name_margin">7dp</dimen>
+    <dimen name="wheel_margin">46dp</dimen>
+    <!--Modes-->
+    <dimen name="modes_left">22dp</dimen>
+    <dimen name="modes_bottom">21dp</dimen>
+    <dimen name="modes_height">105dp</dimen>
+    <dimen name="modes_width">86dp</dimen>
+    <dimen name="modes_seekbar_width">44dp</dimen>
+    <dimen name="modes_seekbar_height">34dp</dimen>
+    <dimen name="modes_seekbar_margin">14dp</dimen>
+    <dimen name="modes_vertical_margin">17dp</dimen>
+    <dimen name="modes_bg_margin">8dp</dimen>
+    <dimen name="modes_item_text_size">21sp</dimen>
+    <dimen name="modes_item_image_size">29dp</dimen>
+    <!--Menu-->
+    <dimen name="actionbar_height">58dp</dimen>
+    <dimen name="back_arrow_padding">12dp</dimen>
+    <dimen name="menu_button_padding">4dp</dimen>
+    <dimen name="main_menu_width">318dp</dimen>
+    <dimen name="list_item_icon_height">37dp</dimen>
+    <dimen name="list_item_icon_width">41dp</dimen>
+    <dimen name="list_item_padding">13dp</dimen>
+    <dimen name="list_item_text_size">19sp</dimen>
+    <dimen name="menu_grid_padding_top">23dp</dimen>
+    <dimen name="menu_grid_vertical_spacing">37dp</dimen>
+    <dimen name="piano_icons_height">89dp</dimen>
+    <dimen name="piano_icons_width">89dp</dimen>
+    <dimen name="piano_icons_text_size">16sp</dimen>
+    <dimen name="files_item_image_height">70dp</dimen>
+    <dimen name="files_item_image_width">70dp</dimen>
+    <dimen name="files_title_text_size">23sp</dimen>
+    <dimen name="files_item_title_text_size">22sp</dimen>
+    <dimen name="files_item_sub_text_size">19sp</dimen>
+    <dimen name="tuning_settings_list_item_image_height">70dp</dimen>
+    <dimen name="tuning_settings_list_item_image_width">70dp</dimen>
+    <dimen name="tuning_settings_list_item_text_size">23sp</dimen>
+    <dimen name="search_padding">14dp</dimen>
+    <!--Graphing area-->
+    <dimen name="keyboard_bottom">8dp</dimen>
+    <dimen name="keyboard_height">44dp</dimen>
+    <dimen name="graph_height">131dp</dimen>
+    <dimen name="keyboard_margin">21dp</dimen>
+
+
+    <item format="float" type="dimen" name="graph_line_width">1.6</item>
+
+</resources>

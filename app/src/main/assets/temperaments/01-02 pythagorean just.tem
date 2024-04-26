@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-pythagorean-just",
+    "name": "Pythagorean Just",
+    "year": "1482",
+    "category": "PYTHAGOREAN/JUST",
+    "comma": "SC",
+    "offsets": {
+        "A": 0,
+        "A#": -9.775,
+        "B": 3.91,
+        "C": -5.865,
+        "C#": -13.6863,
+        "D": -1.955,
+        "D#": -9.77628,
+        "E": 1.955,
+        "F": -7.82,
+        "F#": -15.6413,
+        "G": -3.91,
+        "G#": -11.7313
+    }
+}

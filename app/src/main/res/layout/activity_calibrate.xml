@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    tools:context="com.willeypianotuning.toneanalyzer.ui.calibration.CalibrateActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_color"
+        android:minHeight="?attr/actionBarSize" />
+
+    <RelativeLayout
+        android:id="@+id/calibrate_dial_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/calibrate_wheel_margin">
+
+        <com.willeypianotuning.toneanalyzer.ui.views.DialView
+            android:layout_width="@dimen/wheel_width_calibrate"
+            android:layout_height="@dimen/wheel_width_calibrate"
+            android:layout_alignParentTop="false"
+            android:layout_centerInParent="true" />
+
+        <com.willeypianotuning.toneanalyzer.ui.views.RingView
+            android:id="@+id/ring4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:circleRadius="@dimen/ring3_radius"
+            app:numberOfDashes="4"
+            app:strokeColor="?attr/appThemeRingStrokeColor"
+            app:showRing="true"
+            app:showLabel="false"
+            app:strokeWidth="@dimen/ring_stroke_size" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calibrate_dial_panel"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/cover_margin_calibrate"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/top_panel" />
+
+    <ImageView
+        android:id="@+id/indicator"
+        android:layout_width="@dimen/indicator_width_calibration"
+        android:layout_height="@dimen/indicator_width_calibration"
+        android:layout_alignTop="@+id/topPanel"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/indicator_margin"
+        android:scaleType="fitCenter"
+        android:background="@drawable/note_indicator_bg"
+        app:srcCompat="@drawable/note_indicator_rim" />
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <SeekBar
+        android:id="@+id/calibrationSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/calibrationMinusButton"
+        android:layout_alignBottom="@+id/calibrationMinusButton"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_toStartOf="@+id/calibrationPlusButton"
+        android:layout_toEndOf="@+id/calibrationMinusButton"
+        android:maxHeight="70dp"
+        android:minHeight="70dp"
+        android:progress="50" />
+
+    <ImageButton
+        android:id="@+id/calibrationMinusButton"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_alignStart="@+id/calibrate_dial_panel"
+        android:layout_alignParentBottom="true"
+        android:background="#00ffffff"
+        android:padding="10dp"
+        android:text="&lt;"
+        app:srcCompat="@drawable/ic_next_arrow_left" />
+
+    <ImageButton
+        android:id="@+id/calibrationPlusButton"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_alignEnd="@+id/calibrate_dial_panel"
+        android:layout_alignParentBottom="true"
+        android:background="#00ffffff"
+        android:text=">"
+        app:srcCompat="@drawable/ic_next_arrow_right" />
+
+    <TextView
+        android:id="@+id/calibrationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/calibrationSlider"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-15dp"
+        android:text="0.0"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:textSize="@dimen/files_item_sub_text_size" />
+
+    <Button
+        android:id="@+id/calibrationReferenceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_margin="@dimen/file_name_margin"
+        android:layout_marginStart="@dimen/file_name_margin"
+        android:layout_marginLeft="@dimen/file_name_margin"
+        android:layout_marginTop="@dimen/file_name_margin"
+        android:layout_marginEnd="@dimen/file_name_margin"
+        android:layout_marginRight="@dimen/file_name_margin"
+        android:layout_marginBottom="@dimen/file_name_margin"
+        android:text="440.0 Hz"
+        android:textAllCaps="false"
+        android:textSize="@dimen/files_item_sub_text_size" />
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="@dimen/indicator_width"
+    tools:layout_width="@dimen/indicator_width"
+    tools:parentTag="android.widget.FrameLayout">
+
+    <ImageView
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/note_indicator_bg"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/note_indicator_rim" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/currentNoteNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currentNoteOffsetTextView"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/indicator_text_margin"
+            android:gravity="top|center_horizontal"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="A4"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/indicator_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currentNoteOffsetTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="0.0"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/indicator_text_size2"
+            android:textStyle="bold"
+            app:autoSizeTextType="none" />
+
+        <ImageButton
+            android:id="@+id/currentNoteOffsetLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/currentNoteOffsetTextView"
+            android:layout_alignBottom="@+id/currentNoteOffsetTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="#00ffffff"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_lock" />
+
+    </RelativeLayout>
+
+</merge>

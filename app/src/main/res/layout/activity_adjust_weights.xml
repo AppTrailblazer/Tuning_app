@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"
+        android:minHeight="?attr/actionBarSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@color/tuning_chart_bg"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/tuningStyleNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/ring_label_text_size"
+                tools:text="file name.cde" />
+
+            <TextView
+                android:id="@+id/tuningStyleLeftAxisTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingHorizontal="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/symbol_cents"
+                android:textColor="@color/tuning_style_label_active"
+                android:textSize="@dimen/ring_label_text_size" />
+
+            <TextView
+                android:id="@+id/tuningStyleRightAxisTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingHorizontal="12dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/symbol_cents"
+                android:textColor="@color/tuning_style_label_disabled"
+                android:textSize="@dimen/ring_label_text_size" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tuningCurveChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="4dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/listItemWeightsOctave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:minHeight="?attr/listPreferredItemHeight"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp">
+
+                <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                    android:id="@+id/weightTuneViewOctave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/listItemWeightsOctaveDropDown"
+                    app:currentValue="4"
+                    app:maxValue="10"
+                    app:minValue="0.1"
+                    app:title="@string/interval_weights_octave"
+                    app:titleTextSize="20sp"
+                    app:valueStepSize="0.01"
+                    app:valueTextSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/listItemWeightsOctaveDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            </RelativeLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/listItemWeightsOctaveExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="4dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="4dp"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.5"
+                tools:el_expanded="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewOctave_2_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="4"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="2:1"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewOctave_4_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="4"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="4:2"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewOctave_6_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="3.33"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="6:3"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewOctave_8_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="2.5"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="8:4"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewOctave_10_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="2"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="10:5"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line_divider" />
+
+            <RelativeLayout
+                android:id="@+id/listItemWeightsTwelfth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:minHeight="?attr/listPreferredItemHeight"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp">
+
+                <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                    android:id="@+id/weightTuneViewTwelfth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/listItemWeightsTwelfthDropDown"
+                    app:currentValue="6.67"
+                    app:maxValue="10"
+                    app:minValue="0.1"
+                    app:title="@string/interval_weights_twelfth"
+                    app:titleTextSize="20sp"
+                    app:valueStepSize="0.01"
+                    app:valueTextSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/listItemWeightsTwelfthDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            </RelativeLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/listItemWeightsTwelfthExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="4dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="4dp"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.5"
+                tools:el_expanded="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewTwelfth_3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="6.67"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="3:1"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewTwelfth_6_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="1.33"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="6:2"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewTwelfth_9_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="2.22"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="9:3"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line_divider" />
+
+            <RelativeLayout
+                android:id="@+id/listItemWeightsDoubleOctave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:minHeight="?attr/listPreferredItemHeight"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp">
+
+                <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                    android:id="@+id/weightTuneViewDoubleOctave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/listItemWeightsDoubleOctaveDropDown"
+                    app:currentValue="1"
+                    app:maxValue="10"
+                    app:minValue="0.1"
+                    app:title="@string/interval_weights_double_octave"
+                    app:titleTextSize="20sp"
+                    app:valueStepSize="0.01"
+                    app:valueTextSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/listItemWeightsDoubleOctaveDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            </RelativeLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/listItemWeightsDoubleOctaveExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="4dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="4dp"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.5"
+                tools:el_expanded="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewDoubleOctave_4_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="1"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="4:1"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewDoubleOctave_8_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="0.33"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="8:2"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line_divider" />
+
+            <RelativeLayout
+                android:id="@+id/listItemWeightsNineteenth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:minHeight="?attr/listPreferredItemHeight"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp">
+
+                <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                    android:id="@+id/weightTuneViewNineteenth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/listItemWeightsNineteenthDropDown"
+                    app:currentValue="1"
+                    app:maxValue="10"
+                    app:minValue="0.1"
+                    app:title="@string/interval_weights_nineteenth"
+                    app:titleTextSize="20sp"
+                    app:valueStepSize="0.01"
+                    app:valueTextSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/listItemWeightsNineteenthDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            </RelativeLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/listItemWeightsNineteenthExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="4dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="4dp"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.5"
+                tools:el_expanded="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewNineteenth_6_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="1"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="6:1"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line_divider" />
+
+            <RelativeLayout
+                android:id="@+id/listItemWeightsTripleOctave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:minHeight="?attr/listPreferredItemHeight"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp">
+
+                <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                    android:id="@+id/weightTuneViewTripleOctave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/listItemWeightsTripleOctaveDropDown"
+                    app:currentValue="1"
+                    app:maxValue="10"
+                    app:minValue="0.1"
+                    app:title="@string/interval_weights_triple_octave"
+                    app:titleTextSize="20sp"
+                    app:valueStepSize="0.01"
+                    app:valueTextSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/listItemWeightsTripleOctaveDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            </RelativeLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/listItemWeightsTripleOctaveExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="4dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="4dp"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.5"
+                tools:el_expanded="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewTripleOctave_8_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="1"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="8:1"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line_divider" />
+
+            <RelativeLayout
+                android:id="@+id/listItemWeightsFifth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:minHeight="?attr/listPreferredItemHeight"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp">
+
+                <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                    android:id="@+id/weightTuneViewFifth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/listItemWeightsFifthDropDown"
+                    app:currentValue="3.33"
+                    app:maxValue="10"
+                    app:minValue="0.1"
+                    app:title="@string/interval_weights_fifth"
+                    app:titleTextSize="20sp"
+                    app:valueStepSize="0.01"
+                    app:valueTextSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/listItemWeightsFifthDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            </RelativeLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/listItemWeightsFifthExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="4dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="4dp"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.5"
+                tools:el_expanded="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewFifth_3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="3.33"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="3:2"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewFifth_6_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="0.67"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="6:4"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line_divider" />
+
+            <RelativeLayout
+                android:id="@+id/listItemWeightsFourth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:minHeight="?attr/listPreferredItemHeight"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp">
+
+                <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                    android:id="@+id/weightTuneViewFourth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/listItemWeightsFourthDropDown"
+                    app:currentValue="1"
+                    app:maxValue="10"
+                    app:minValue="0.1"
+                    app:title="@string/interval_weights_fourth"
+                    app:titleTextSize="20sp"
+                    app:valueStepSize="0.01"
+                    app:valueTextSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/listItemWeightsFourthDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            </RelativeLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/listItemWeightsFourthExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="4dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="4dp"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.5"
+                tools:el_expanded="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewFourth_4_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="1"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="4:3"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewFourth_8_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="0.33"
+                        app:maxValue="10"
+                        app:minValue="0.1"
+                        app:title="8:6"
+                        app:titleTextSize="16sp"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line_divider" />
+
+            <RelativeLayout
+                android:id="@+id/listItemWeightsExtraTrebleStretch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:minHeight="?attr/listPreferredItemHeight"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp">
+
+                <ImageButton
+                    android:id="@+id/listItemWeightsExtraTrebleStretchDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+                <TextView
+                    android:id="@+id/weightTuneViewExtraTrebleStretch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/listItemWeightsExtraTrebleStretchDropDown"
+                    android:text="@string/interval_weights_extra_treble_stretch"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/white"
+                    android:textDirection="locale"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/listItemWeightsExtraTrebleStretchExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="4dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="4dp"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.5"
+                tools:el_expanded="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewExtraTrebleStretchCentsPerOctave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="0"
+                        app:editDialogTitle="@string/interval_weights_stretch_cents_per_octave"
+                        app:maxValue="3"
+                        app:minValue="-3"
+                        app:title="@string/interval_weights_stretch_cents_per_octave"
+                        app:titleTextSize="16sp"
+                        app:valuePrecision="2"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewExtraTrebleStretchOctaves"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="18"
+                        app:editDialogTitle="@string/interval_weights_stretch_octaves"
+                        app:maxValue="39"
+                        app:minValue="6"
+                        app:title="@string/interval_weights_stretch_octaves"
+                        app:titleTextSize="16sp"
+                        app:valuePrecision="2"
+                        app:valueStepSize="1"
+                        app:valueTextSize="14sp" />
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line_divider" />
+
+            <RelativeLayout
+                android:id="@+id/listItemWeightsExtraBassStretch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:minHeight="?attr/listPreferredItemHeight"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp">
+
+                <ImageButton
+                    android:id="@+id/listItemWeightsExtraBassStretchDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+                <TextView
+                    android:id="@+id/weightTuneViewExtraBassStretch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/listItemWeightsExtraBassStretchDropDown"
+                    android:text="@string/interval_weights_extra_bass_stretch"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/white"
+                    android:textDirection="locale"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/listItemWeightsExtraBassStretchExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="4dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="4dp"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.5"
+                tools:el_expanded="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewExtraBassStretchCentsPerOctave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="0"
+                        app:editDialogTitle="@string/interval_weights_stretch_cents_per_octave"
+                        app:maxValue="3"
+                        app:minValue="-3"
+                        app:title="@string/interval_weights_stretch_cents_per_octave"
+                        app:titleTextSize="16sp"
+                        app:valuePrecision="2"
+                        app:valueStepSize="0.01"
+                        app:valueTextSize="14sp" />
+
+                    <com.willeypianotuning.toneanalyzer.ui.settings.weights.WeightTuneView
+                        android:id="@+id/weightTuneViewExtraBassStretchOctaves"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        app:currentValue="12"
+                        app:editDialogTitle="@string/interval_weights_stretch_octaves"
+                        app:maxValue="32"
+                        app:minValue="6"
+                        app:title="@string/interval_weights_stretch_octaves"
+                        app:titleTextSize="16sp"
+                        app:valuePrecision="2"
+                        app:valueStepSize="1"
+                        app:valueTextSize="14sp" />
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line_divider" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/actionLoad"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_load"
+            app:drawableTopCompat="@drawable/ic_files_open" />
+
+        <TextView
+            android:id="@+id/actionAdd"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_tuning_style_action_new_tuning"
+            app:drawableTopCompat="@drawable/ic_files_new" />
+
+        <TextView
+            android:id="@+id/actionSave"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/action_save"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/ic_files_save"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/actionDelete"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_delete"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/ic_files_delete"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/actionReset"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_tuning_style_action_undo"
+            app:drawableTopCompat="@drawable/ic_reset_white_24dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

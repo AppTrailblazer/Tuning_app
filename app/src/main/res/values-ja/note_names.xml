@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="use_alphabetic">false</bool>
+    <bool name="sharp_after_note">false</bool>
+    <string name="sign_sharp">嬰</string>
+    <integer name="sharp_vertical_position">0</integer>
+
+    <string name="solmization_do">ハ</string>
+    <string name="solmization_re">ニ</string>
+    <string name="solmization_mi">ホ</string>
+    <string name="solmization_fa">ヘ</string>
+    <string name="solmization_sol">ト</string>
+    <string name="solmization_la">イ</string>
+    <string name="solmization_si">ロ</string>
+</resources>

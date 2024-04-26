@@ -1,0 +1,55 @@
+enum ReleaseType {
+    Stable,
+    Candidate,
+    Beta,
+    Alpha,
+    Unknown
+}
+
+def parseReleaseType = { String version ->
+    def stableKeyword = ['RELEASE', 'FINAL', 'GA'].any { it -> version.toUpperCase().contains(it) }
+    def regex = /^[0-9,.v-]+$/
+    if (stableKeyword || (version ==~ regex)) {
+        return ReleaseType.Stable
+    }
+    def rcKeywords = ['RC'].any { it -> version.toUpperCase().contains(it) }
+    if (rcKeywords) {
+        return ReleaseType.Candidate
+    }
+    def betaKeywords = ['BETA'].any { it -> version.toUpperCase().contains(it) }
+    if (betaKeywords) {
+        return ReleaseType.Beta
+    }
+    def alphaKeywords = ['ALPHA'].any { it -> version.toUpperCase().contains(it) }
+    if (alphaKeywords) {
+        return ReleaseType.Alpha
+    }
+    return ReleaseType.Unknown
+}
+
+dependencyUpdates {
+    resolutionStrategy {
+        componentSelection {
+            all {
+                def candidateReleaseType = parseReleaseType(it.candidate.version)
+                if (candidateReleaseType != ReleaseType.Stable) {
+                    def currentReleaseType = parseReleaseType(it.currentVersion)
+                    if (candidateReleaseType > currentReleaseType) {
+                        reject("Unstable version track. Current = $currentReleaseType. Candidate = $candidateReleaseType")
+                    }
+                }
+            }
+        }
+    }
+}
+
+versionCatalogUpdate {
+    sortByKey = true
+    pin {
+        groups = []
+    }
+    keep {
+        keepUnusedVersions = true
+        keepUnusedLibraries = true
+    }
+}

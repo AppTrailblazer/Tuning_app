@@ -1,0 +1,471 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    tools:context="com.willeypianotuning.toneanalyzer.ui.help.HelpActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_color"
+        android:minHeight="?attr/actionBarSize" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleGettingStarted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/temperament_category_background"
+                android:clickable="true"
+                android:enabled="true"
+                android:onClick="onTitlePressed"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/help_section_getting_started_title"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textDirection="locale"
+                app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/gettingStartedContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleGettingStarted"
+                android:layout_alignParentStart="true"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.0"
+                tools:el_expanded="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/help_section_getting_started_content"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textDirection="locale" />
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <TextView
+                android:id="@+id/titleTuningDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gettingStartedContent"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="1dp"
+                android:background="@color/temperament_category_background"
+                android:enabled="true"
+                android:onClick="onTitlePressed"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/help_section_tuning_display_title"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textDirection="locale"
+                app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/tuningDisplayContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTuningDisplay"
+                android:layout_alignParentStart="true"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.0"
+                tools:el_expanded="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/help_section_tuning_display_content"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textDirection="locale" />
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <TextView
+                android:id="@+id/titleGraphingArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tuningDisplayContent"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="1dp"
+                android:background="@color/temperament_category_background"
+                android:clickable="true"
+                android:enabled="true"
+                android:onClick="onTitlePressed"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/help_section_graphing_area_title"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textDirection="locale"
+                app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/graphingAreaContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleGraphingArea"
+                android:layout_alignParentStart="true"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.0"
+                tools:el_expanded="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/help_section_graphing_area_content"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textDirection="locale" />
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <TextView
+                android:id="@+id/titleNoteSwitching"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/graphingAreaContent"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="1dp"
+                android:background="@color/temperament_category_background"
+                android:clickable="true"
+                android:enabled="true"
+                android:onClick="onTitlePressed"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/help_section_note_switching_title"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textDirection="locale"
+                app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/noteSwitchingContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleNoteSwitching"
+                android:layout_alignParentStart="true"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.0"
+                tools:el_expanded="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/help_section_note_switching_content"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textDirection="locale" />
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <TextView
+                android:id="@+id/titleLockingTuning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteSwitchingContent"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="1dp"
+                android:background="@color/temperament_category_background"
+                android:clickable="true"
+                android:enabled="true"
+                android:onClick="onTitlePressed"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/help_section_locking_a_tuning_title"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textDirection="locale"
+                app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/lockingTuningContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleLockingTuning"
+                android:layout_alignParentStart="true"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.0"
+                tools:el_expanded="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/help_section_locking_tuning_content"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textDirection="locale" />
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <TextView
+                android:id="@+id/titleTuningFiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lockingTuningContent"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="1dp"
+                android:background="@color/temperament_category_background"
+                android:clickable="true"
+                android:enabled="true"
+                android:onClick="onTitlePressed"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/help_section_saving_and_loading_tuning_files_title"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textDirection="locale"
+                app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/tuningFilesContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTuningFiles"
+                android:layout_alignParentStart="true"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.0"
+                tools:el_expanded="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/help_section_saving_and_loading_tuning_files_content"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textDirection="locale" />
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <TextView
+                android:id="@+id/titleCalibration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tuningFilesContent"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="1dp"
+                android:background="@color/temperament_category_background"
+                android:clickable="true"
+                android:enabled="true"
+                android:onClick="onTitlePressed"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/help_section_calibration_title"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textDirection="locale"
+                app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/calibrationContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleCalibration"
+                android:layout_alignParentStart="true"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.0"
+                tools:el_expanded="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/help_section_calibration_content"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textDirection="locale" />
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <TextView
+                android:id="@+id/titleTuningOtherFrequencies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calibrationContent"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="1dp"
+                android:background="@color/temperament_category_background"
+                android:clickable="true"
+                android:enabled="true"
+                android:onClick="onTitlePressed"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/help_section_tuning_to_frequencies_title"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textDirection="locale"
+                app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/tuningOtherFrequenciesContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTuningOtherFrequencies"
+                android:layout_alignParentStart="true"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.0"
+                tools:el_expanded="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/help_section_tuning_other_frequencies_content"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textDirection="locale" />
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <TextView
+                android:id="@+id/titlePitchRaise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tuningOtherFrequenciesContent"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="1dp"
+                android:background="@color/temperament_category_background"
+                android:clickable="true"
+                android:enabled="true"
+                android:onClick="onTitlePressed"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/help_section_pitch_raise"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textDirection="locale"
+                app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/pitchRaiseContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titlePitchRaise"
+                android:layout_alignParentStart="true"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.0"
+                tools:el_expanded="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/help_section_pitch_raise_content"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textDirection="locale" />
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <TextView
+                android:id="@+id/titleTuningStyles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pitchRaiseContent"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="1dp"
+                android:background="@color/temperament_category_background"
+                android:clickable="true"
+                android:enabled="true"
+                android:onClick="onTitlePressed"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/help_section_tuning_style"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textDirection="locale"
+                app:drawableEndCompat="@drawable/ic_arrow_drop_down_white_24dp" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/tuningStylesContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTuningStyles"
+                android:layout_alignParentStart="true"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0.0"
+                tools:el_expanded="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/help_section_tuning_style_content"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textDirection="locale" />
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

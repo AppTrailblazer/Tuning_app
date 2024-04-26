@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-mersenne-chaumount",
+    "name": "Mersenne-Chaumont",
+    "year": "1695",
+    "category": "FRENCH/MODIFIED MEANTONE",
+    "comma": "SC",
+    "offsets": {
+        "A": 0,
+        "A#": 6.35471,
+        "B": -6.84314,
+        "C": 10.26471,
+        "C#": -13.6863,
+        "D": 3.42157,
+        "D#": -0.97686,
+        "E": -3.42157,
+        "F": 13.68629,
+        "F#": -10.2647,
+        "G": 6.84314,
+        "G#": -17.1079
+    }
+}

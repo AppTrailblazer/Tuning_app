@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="homeAsUpIndicator">@drawable/ic_back_arrow</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/menu_background</item>
+
+        <item name="appThemeBackPanelSource">@null</item>
+        <item name="appThemeTopPanelSource">@drawable/top_panel</item>
+        <item name="appThemeRingStrokeColor">@color/white</item>
+        <item name="appThemeChartsBackground">@color/black</item>
+        <item name="appThemeRingFillAngle">60.0</item>
+        <item name="appThemeRingLabelColor">@color/ring_label_color_dark</item>
+        <item name="appThemeRingLabelTextColor">@color/white</item>
+    </style>
+</resources>

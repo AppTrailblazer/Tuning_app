@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="piano_types">
+        <item>@string/piano_type_concert_grand</item>
+        <item>@string/piano_type_medium_grand</item>
+        <item>@string/piano_type_baby_grand</item>
+        <item>@string/piano_type_full_upright</item>
+        <item>@string/piano_type_studio_upright</item>
+        <item>@string/piano_type_console</item>
+        <item>@string/piano_type_spinet</item>
+        <item>@string/piano_type_other</item>
+        <item> </item>
+    </string-array>
+
+    <string-array name="info_box_labels">
+        <item>@string/info_box_label_make</item>
+        <item>@string/info_box_label_model</item>
+        <item>@string/info_box_label_pitch_offset</item>
+        <item>@string/info_box_label_clock</item>
+    </string-array>
+</resources>

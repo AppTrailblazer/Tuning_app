@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="temperament_chart_outer_circle">
+        <item>-3.12</item>
+        <item>-7.87</item>
+        <item>-3.85</item>
+        <item>-4.74</item>
+        <item>-6.66</item>
+        <item>-0.30</item>
+        <item>-9.79</item>
+        <item>-9.41</item>
+        <item>-2.42</item>
+        <item>-5.33</item>
+        <item>-3.80</item>
+        <item>-5.04</item>
+    </string-array>
+
+    <string-array name="temperament_chart_middle_circle">
+        <item>-6/91</item>
+        <item>-22/75</item>
+        <item>-29/49</item>
+        <item>-15/46</item>
+        <item>-5/16</item>
+        <item>-36/37</item>
+        <item>-36/37</item>
+        <item>0/1</item>
+        <item>-31/71</item>
+        <item>-78/85</item>
+        <item>-1/97</item>
+        <item>-24/73</item>
+    </string-array>
+
+    <string-array name="temperament_chart_inner_circle">
+        <item>99.4</item>
+        <item>55.4</item>
+        <item>70.5</item>
+        <item>36.9</item>
+        <item>25.6</item>
+        <item>29.7</item>
+        <item>70.8</item>
+        <item>6.3</item>
+        <item>36.6</item>
+        <item>89.2</item>
+        <item>23.9</item>
+        <item>6.8</item>
+    </string-array>
+</resources>

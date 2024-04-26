@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-vallotti-young",
+    "name": "Vallotti-Young (shifted Vallotti)",
+    "year": "1780",
+    "category": "WELL",
+    "comma": "PC",
+    "offsets": {
+        "A": 0,
+        "A#": 1.955,
+        "B": -3.91,
+        "C": 5.865,
+        "C#": -3.91,
+        "D": 1.955,
+        "D#": 0,
+        "E": -1.955,
+        "F": 3.91,
+        "F#": -5.865,
+        "G": 3.91,
+        "G#": -1.955
+    }
+}

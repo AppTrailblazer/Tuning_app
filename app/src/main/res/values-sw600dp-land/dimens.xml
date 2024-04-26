@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Landscape-->
+    <dimen name="wheel_margin">9dp</dimen>
+    <dimen name="graph_top_margin">22dp</dimen>
+    <dimen name="keyboard_margin">100dp</dimen>
+
+
+</resources>

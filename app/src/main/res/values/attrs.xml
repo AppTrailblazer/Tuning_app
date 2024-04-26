@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppThemeStyle">
+        <attr name="appThemeBackPanelSource" format="reference" />
+        <attr name="appThemeTopPanelSource" format="reference" />
+        <attr name="appThemeDialPanelSource" format="reference" />
+        <attr name="appThemeRingStrokeColor" format="color" />
+        <attr name="appThemeRingFillAngle" format="float" />
+        <attr name="appThemeRingLabelColor" format="color" />
+        <attr name="appThemeRingLabelTextColor" format="color" />
+        <attr name="appThemeChartsBackground" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="NotePointerView">
+        <attr name="np_currentNote" format="integer" />
+        <attr name="np_borderWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="VerticalSlider">
+        <attr name="vs_iconLow" format="reference" />
+        <attr name="vs_iconMedium" format="reference" />
+        <attr name="vs_iconHigh" format="reference" />
+        <attr name="vs_max" format="integer" />
+        <attr name="vs_progress" format="integer" />
+        <attr name="vs_cornerRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="PianoKeyboardView">
+        <attr name="pv_currentNote" format="integer" />
+        <attr name="pv_borderWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TemperamentChartView">
+        <attr name="noteNameTextColor" format="color" />
+        <attr name="noteCircleColor" format="color" />
+        <attr name="lineColor" format="color" />
+        <attr name="offsetTextColor" format="color" />
+        <attr name="offsetHighTextColor" format="color" />
+
+        <attr name="lineWidth" format="dimension" />
+        <attr name="noteCircleRadius" format="dimension" />
+
+        <attr name="noteTextSize" format="dimension" />
+        <attr name="offsetTextSize" format="dimension" />
+
+        <attr name="drawInnerLines" format="boolean" />
+
+        <attr name="innerData" format="reference" />
+        <attr name="middleData" format="reference" />
+        <attr name="outerData" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="WeightTuneView">
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="title" format="string" />
+
+        <attr name="valueTextSize" format="dimension" />
+        <attr name="valueTextColor" format="color" />
+
+        <attr name="minValue" format="float" />
+        <attr name="maxValue" format="float" />
+        <attr name="currentValue" format="float" />
+        <attr name="valueStepSize" format="float" />
+        <attr name="valuePrecision" format="integer" />
+        <attr name="editDialogTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="NoteSwitchModeSelector">
+        <attr name="android:tint" format="color" />
+        <attr name="ns_showLabel" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PlanOptionView">
+        <attr name="po_title" format="string" />
+        <attr name="po_description" format="string" />
+        <attr name="po_expanded" format="boolean" />
+        <attr name="po_enabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RingView">
+        <attr name="strokeColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="circleRadius" format="dimension" />
+        <attr name="numberOfDashes" format="integer" />
+        <attr name="labelTextColor" format="color" />
+        <attr name="labelBackgroundColor" format="color" />
+        <attr name="labelStartAngle" format="float" />
+        <attr name="ringFillAngle" format="float" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="label" format="string" />
+        <attr name="showRing" format="boolean" />
+        <attr name="showLabel" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="use_alphabetic">false</bool>
+
+    <string name="solmization_do">До</string>
+    <string name="solmization_re">Ре</string>
+    <string name="solmization_mi">Ми</string>
+    <string name="solmization_fa">Фа</string>
+    <string name="solmization_sol">Сол</string>
+    <string name="solmization_la">Ля</string>
+    <string name="solmization_si">Си</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <ImageButton
+        android:id="@+id/grid_item_button"
+        android:layout_width="@dimen/piano_icons_width"
+        android:layout_height="@dimen/piano_icons_height"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        tools:background="@drawable/piano_type_item_bg_pressed"
+        tools:src="@drawable/ic_piano_studio_upright" />
+
+    <TextView
+        android:id="@+id/grid_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/piano_icons_text_size"
+        tools:text="Studio Upright" />
+
+</LinearLayout>

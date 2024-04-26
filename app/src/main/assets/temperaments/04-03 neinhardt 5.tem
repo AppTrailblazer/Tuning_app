@@ -1,0 +1,21 @@
+{
+    "id": "preloaded-neihardt-5",
+    "name": "Neinhardt #5",
+    "year": "1732",
+    "category": "WELL",
+    "comma": "PC",
+    "offsets": {
+        "A": 0,
+        "A#": 0,
+        "B": -1.955,
+        "C": 0,
+        "C#": 0,
+        "D": 0,
+        "D#": 0,
+        "E": -1.955,
+        "F": 1.955,
+        "F#": 0,
+        "G": -1.955,
+        "G#": 0
+    }
+}

@@ -1,0 +1,213 @@
+plugins {
+    alias(libs.plugins.androidApp)
+    alias(libs.plugins.kotlin)
+    alias(libs.plugins.kotlinKsp)
+    id 'kotlin-parcelize'
+
+    alias(libs.plugins.firebaseCrashlytics)
+    alias(libs.plugins.googleServices)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.room)
+}
+
+android {
+    compileSdk rootProject.compileSdk
+    ndkVersion "25.2.9519653"
+
+    defaultConfig {
+        applicationId "com.willeypianotuning.toneanalyzer"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 116
+        versionName '3.4.3'
+        // when updating, don't forget to update locales_config.xml
+        resourceConfigurations += ['en', 'de', 'el', 'es', 'fi', 'fr', 'hi', 'hu', 'it', 'ja', 'ko', 'nl', 'pt', 'ru', 'sv', 'uk', 'zh', 'ar']
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    room {
+        schemaDirectory "$projectDir/src/androidTest/schemas"
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion "${libs.versions.composeCompiler.get()}"
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("$rootProject.projectDir/gradle/debug.jks")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            debuggable true
+            versionNameSuffix "-debug"
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            firebaseCrashlytics {
+                nativeSymbolUploadEnabled true
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs += 'src/main/kotlin'
+        }
+        test {
+            java.srcDirs += 'src/test/kotlin'
+        }
+        androidTest {
+            java.srcDirs += 'src/androidTest/kotlin'
+            assets.srcDirs += ["$projectDir/src/androidTest/schemas"]
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility rootProject.jvmTarget
+        targetCompatibility rootProject.jvmTarget
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('./src/main/cpp/CMakeLists.txt')
+        }
+    }
+
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+            includeAndroidResources = true
+        }
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(rootProject.jvmToolchain)
+        }
+    }
+    kotlin {
+        jvmToolchain(rootProject.jvmToolchain)
+    }
+    kotlinOptions {
+        jvmTarget = rootProject.jvmTarget
+    }
+    namespace 'com.willeypianotuning.toneanalyzer'
+}
+
+tasks.register("setupNative", Exec) {
+    group = "native"
+    setWorkingDir("src/main/cpp")
+    setCommandLine("cmake", "-S", ".", "-B", "$projectDir/build/cmake")
+}
+
+tasks.register('buildNative', Exec) {
+    group = "native"
+    dependsOn("setupNative")
+    setWorkingDir("src/main/cpp")
+    setCommandLine("cmake", "--build", "$projectDir/build/cmake", "--config", "release")
+}
+
+tasks.withType(Test).configureEach {
+    dependsOn("buildNative")
+    systemProperty "java.library.path", "$projectDir/build/cmake"
+}
+
+dependencies {
+    implementation(libs.kotlinStdlib)
+    implementation(projects.lazystring)
+    implementation(libs.androidxAppCompat)
+    implementation(libs.androidxCoreKtx)
+    implementation(libs.androidxTracingKtx)
+    implementation(libs.androidxActivityKtx)
+    implementation(libs.androidxFragmentKtx)
+    implementation(libs.materialDesign)
+
+    implementation(libs.androidxActivityCompose)
+    implementation(libs.bundles.compose)
+    implementation(libs.composeMaterial)
+    implementation(libs.composeColorPicker)
+
+    implementation(libs.androidxLifecycleViewModelKtx)
+    implementation(libs.androidxLifecycleLiveDataKtx)
+    implementation(libs.androidxLifecycleRuntimeKtx)
+    implementation(libs.androidxLifecycleRuntimeCompose)
+
+    implementation(libs.androidxRecyclerView)
+    implementation(libs.androidxConstraintLayout)
+
+    // database
+    implementation(libs.bundles.room)
+    ksp(libs.roomCompiler)
+
+    // background jobs
+    implementation(libs.workManagerRuntime)
+
+    implementation(libs.bundles.dropbox)
+
+    implementation(libs.bundles.okhttp)
+
+    implementation(libs.expandableLayout)
+
+    implementation(libs.charts)
+
+    // Android runtime permissions
+    implementation(libs.dexter)
+    // in-app purchases
+    implementation(libs.googlePlayBillingKtx)
+    // better logging
+    implementation(libs.timber)
+
+    implementation(libs.hiltAndroid)
+    ksp(libs.hiltCompiler)
+    implementation(libs.hiltWork)
+    ksp(libs.hiltWorkCompiler)
+
+    implementation(libs.playServicesBase)
+
+    implementation(libs.firebaseConfig)
+    implementation(libs.firebaseAnalytics)
+
+    implementation(libs.crashlytics)
+    implementation(libs.crashlyticsNdk)
+
+    testImplementation(libs.junit)
+    // this library provides support for parsing json
+    // it is available on Android
+    // but not on regular JVM
+    testImplementation(libs.json)
+    testImplementation(libs.kotlinTestingJunit)
+    testImplementation(libs.robolectric)
+
+    androidTestImplementation(libs.bundles.androidxTest)
+    androidTestImplementation(libs.roomTesting)
+}

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.settings.backups.DropBoxBackupRestoreActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"
+        android:minHeight="?attr/actionBarSize" />
+
+    <RelativeLayout
+        android:id="@+id/listItemDropboxBackupFrequency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:minHeight="?attr/listPreferredItemHeight"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:id="@+id/textViewSettingBackupFrequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/dropboxConnectButton"
+            android:maxLines="2"
+            android:text="@string/dropbox_message_backup_to_dropbox"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+            android:textDirection="locale"
+            android:textSize="@dimen/files_title_text_size" />
+
+        <TextView
+            android:id="@+id/dropboxStateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewSettingBackupFrequency"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/dropboxConnectButton"
+            android:maxLines="2"
+            android:text="@string/dropbox_message_not_connected"
+            android:textAlignment="gravity"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textDirection="locale" />
+
+        <TextView
+            android:id="@+id/dropboxConnectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:background="?selectableItemBackground"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/dropbox_action_connect"
+            android:textAllCaps="true"
+            android:textAppearance="?android:textAppearanceButton"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line_divider" />
+
+    <RelativeLayout
+        android:id="@+id/listItemDropboxBackupNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:minHeight="?attr/listPreferredItemHeight"
+        android:paddingLeft="16dp"
+        android:paddingTop="4dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:id="@+id/textViewSettingBackupNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="@string/dropbox_message_backup_now"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+            android:textDirection="locale"
+            android:textSize="@dimen/files_title_text_size" />
+
+        <TextView
+            android:id="@+id/textViewSettingBackupLastDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewSettingBackupNow"
+            android:maxLines="1"
+            android:text="@string/dropbox_message_last_backup"
+            android:textAlignment="gravity"
+            android:textColor="@color/key_white_pressed"
+            android:textDirection="locale"
+            android:textSize="@dimen/files_item_sub_text_size"
+            tools:text="Last Backup: 2019-01-01 09:30" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/backupFilesLabelTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/temperament_category_background"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/dropbox_backups_list_title"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textDirection="locale"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/backupFilesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@android:layout/simple_list_item_1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center_horizontal"
+            android:text="@string/dropbox_message_loading_backup_files" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center_horizontal"
+            android:maxLines="5"
+            android:text="@string/dropbox_message_failed_to_load_list_of_backups" />
+
+        <Button
+            android:id="@+id/retryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="?selectableItemBackground"
+            android:text="@string/dropbox_action_retry" />
+
+    </LinearLayout>
+
+</LinearLayout>

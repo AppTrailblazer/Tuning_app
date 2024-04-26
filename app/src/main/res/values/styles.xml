@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="homeAsUpIndicator">@drawable/ic_back_arrow</item>
+        <item name="colorPrimary">#222120</item>
+        <item name="colorPrimaryDark">#222120</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/menu_background</item>
+
+        <item name="appThemeBackPanelSource">@drawable/back_panel</item>
+        <item name="appThemeTopPanelSource">@drawable/top_panel</item>
+        <item name="appThemeRingStrokeColor">@color/black</item>
+        <item name="appThemeChartsBackground">@drawable/graph_bg</item>
+        <item name="appThemeRingFillAngle">60.0</item>
+        <item name="appThemeRingLabelColor">@color/ring_label_background</item>
+        <item name="appThemeRingLabelTextColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.Launcher" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+
+    <style name="AppTheme.Material.Slider.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#222120</item>
+    </style>
+
+    <style name="AppTheme.Material.Slider.Dark" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#ffffff</item>
+    </style>
+</resources>

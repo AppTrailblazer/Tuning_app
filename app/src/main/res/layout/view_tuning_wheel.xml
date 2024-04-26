@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="@dimen/wheel_width"
+    tools:layout_width="@dimen/wheel_width"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <com.willeypianotuning.toneanalyzer.ui.views.DialView
+        android:id="@+id/dialView"
+        android:layout_width="@dimen/wheel_width"
+        android:layout_height="@dimen/wheel_width"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true" />
+
+    <com.willeypianotuning.toneanalyzer.ui.views.RingView
+        android:id="@+id/ring1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:circleRadius="@dimen/ring1_radius"
+        app:label="4"
+        app:labelBackgroundColor="?attr/appThemeRingLabelColor"
+        app:labelTextColor="?attr/appThemeRingLabelTextColor"
+        app:labelTextSize="@dimen/ring_label_text_size"
+        app:numberOfDashes="32"
+        app:ringFillAngle="?attr/appThemeRingFillAngle"
+        app:strokeColor="?attr/appThemeRingStrokeColor"
+        app:strokeWidth="@dimen/ring_stroke_size" />
+
+    <com.willeypianotuning.toneanalyzer.ui.views.RingView
+        android:id="@+id/ring2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:circleRadius="@dimen/ring2_radius"
+        app:label="3"
+        app:labelBackgroundColor="?attr/appThemeRingLabelColor"
+        app:labelTextColor="?attr/appThemeRingLabelTextColor"
+        app:labelTextSize="@dimen/ring_label_text_size"
+        app:numberOfDashes="16"
+        app:ringFillAngle="?attr/appThemeRingFillAngle"
+        app:strokeColor="?attr/appThemeRingStrokeColor"
+        app:strokeWidth="@dimen/ring_stroke_size" />
+
+    <com.willeypianotuning.toneanalyzer.ui.views.RingView
+        android:id="@+id/ring3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:circleRadius="@dimen/ring3_radius"
+        app:label="2"
+        app:labelBackgroundColor="?attr/appThemeRingLabelColor"
+        app:labelTextColor="?attr/appThemeRingLabelTextColor"
+        app:labelTextSize="@dimen/ring_label_text_size"
+        app:numberOfDashes="8"
+        app:ringFillAngle="?attr/appThemeRingFillAngle"
+        app:strokeColor="?attr/appThemeRingStrokeColor"
+        app:strokeWidth="@dimen/ring_stroke_size" />
+
+    <com.willeypianotuning.toneanalyzer.ui.views.RingView
+        android:id="@+id/ring4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:circleRadius="@dimen/ring4_radius"
+        app:label="1"
+        app:labelBackgroundColor="?attr/appThemeRingLabelColor"
+        app:labelTextColor="?attr/appThemeRingLabelTextColor"
+        app:labelTextSize="@dimen/ring_label_text_size"
+        app:numberOfDashes="4"
+        app:ringFillAngle="?attr/appThemeRingFillAngle"
+        app:strokeColor="?attr/appThemeRingStrokeColor"
+        app:strokeWidth="@dimen/ring_stroke_size" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="@dimen/arrow_width"
+        android:layout_height="@dimen/arrow_width"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/arrow_margin"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_arrow" />
+
+</merge>

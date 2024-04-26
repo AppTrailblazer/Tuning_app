@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="match_parent"
+    android:background="@color/menu_background"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/pitch_raise_setup_note"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="@dimen/list_item_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView6"
+                android:layout_centerHorizontal="true">
+
+                <Button
+                    android:id="@+id/pitch_raise_csharp"
+                    android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                    android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/pitch_raise_black_button"
+                    android:drawableBottom="@android:drawable/checkbox_off_background"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="C#"
+                    android:textColor="#ffffff"
+                    android:textOff="A"
+                    android:textOn="A" />
+
+                <Button
+                    android:id="@+id/pitch_raise_dsharp"
+                    android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                    android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_toEndOf="@+id/pitch_raise_csharp"
+                    android:background="@drawable/pitch_raise_black_button"
+                    android:drawableBottom="@android:drawable/checkbox_off_background"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="D#"
+                    android:textColor="#ffffff"
+                    android:textOff="A"
+                    android:textOn="A" />
+
+                <Button
+                    android:id="@+id/pitch_raise_fsharp"
+                    android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                    android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_toEndOf="@+id/pitch_raise_dsharp"
+                    android:background="@drawable/pitch_raise_black_button"
+                    android:drawableBottom="@android:drawable/checkbox_off_background"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="F#"
+                    android:textColor="#ffffff"
+                    android:textOff="A"
+                    android:textOn="A" />
+
+                <Button
+                    android:id="@+id/pitch_raise_gsharp"
+                    android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                    android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@+id/pitch_raise_fsharp"
+                    android:background="@drawable/pitch_raise_black_button"
+                    android:drawableBottom="@android:drawable/checkbox_off_background"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="G#"
+                    android:textColor="#ffffff"
+                    android:textOff="A"
+                    android:textOn="A" />
+
+                <Button
+                    android:id="@+id/pitch_raise_asharp"
+                    android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                    android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@+id/pitch_raise_gsharp"
+                    android:background="@drawable/pitch_raise_black_button"
+                    android:drawableBottom="@android:drawable/checkbox_off_background"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="A#"
+                    android:textColor="#ffffff"
+                    android:textOff="A"
+                    android:textOn="A" />
+
+                <LinearLayout
+                    android:id="@+id/white_keys_panel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pitch_raise_csharp"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/pitch_raise_c"
+                        android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                        android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/pitch_raise_button"
+                        android:drawableBottom="@android:drawable/checkbox_off_background"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="C"
+                        android:textColor="#000000"
+                        android:textOff="A"
+                        android:textOn="A" />
+
+                    <Button
+                        android:id="@+id/pitch_raise_d"
+                        android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                        android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/pitch_raise_button"
+                        android:drawableBottom="@android:drawable/checkbox_off_background"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="D"
+                        android:textColor="#000000"
+                        android:textOff="A"
+                        android:textOn="A" />
+
+                    <Button
+                        android:id="@+id/pitch_raise_e"
+                        android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                        android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/pitch_raise_button"
+                        android:drawableBottom="@android:drawable/checkbox_off_background"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="E"
+                        android:textColor="#000000"
+                        android:textOff="A"
+                        android:textOn="A" />
+
+                    <Button
+                        android:id="@+id/pitch_raise_f"
+                        android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                        android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/pitch_raise_button"
+                        android:drawableBottom="@android:drawable/checkbox_off_background"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="F"
+                        android:textColor="#000000"
+                        android:textOff="A"
+                        android:textOn="A" />
+
+                    <Button
+                        android:id="@+id/pitch_raise_g"
+                        android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                        android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/pitch_raise_button"
+                        android:drawableBottom="@android:drawable/checkbox_off_background"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="G"
+                        android:textColor="#000000"
+                        android:textOff="A"
+                        android:textOn="A" />
+
+                    <Button
+                        android:id="@+id/pitch_raise_a"
+                        android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                        android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/pitch_raise_button"
+                        android:drawableBottom="@android:drawable/checkbox_off_background"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="A"
+                        android:textColor="#000000"
+                        android:textOff="A"
+                        android:textOn="A" />
+
+                    <Button
+                        android:id="@+id/pitch_raise_b"
+                        android:layout_width="@dimen/pitch_raise_keys_selection_key_width"
+                        android:layout_height="@dimen/pitch_raise_keys_selection_key_height"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/pitch_raise_button"
+                        android:drawableBottom="@android:drawable/checkbox_off_background"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="B"
+                        android:textColor="#000000"
+                        android:textOff="A"
+                        android:textOn="A" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/buttonNegative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/piano_icons_text_size" />
+
+        <Button
+            android:id="@+id/buttonPositive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_continue"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/piano_icons_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

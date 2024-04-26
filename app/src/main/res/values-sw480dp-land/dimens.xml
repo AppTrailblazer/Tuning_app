@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Landscape-->
+    <dimen name="wheel_margin">8dp</dimen>
+    <dimen name="graph_top_margin">10dp</dimen>
+    <dimen name="keyboard_margin">80dp</dimen>
+
+    <dimen name="pitch_raise_keys_selection_key_height">100dp</dimen>
+
+</resources>

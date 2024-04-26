@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <bool name="use_alphabetic">true</bool>
+    <bool name="sharp_after_note">true</bool>
+    <!-- -1 - below, 0 - in text, 1 - above -->
+    <integer name="sharp_vertical_position">1</integer>
+    <integer name="octave_vertical_position">0</integer>
+    <string name="sign_sharp" tools:ignore="MissingTranslation">#</string>
+
+    <string name="alphabetic_a" tools:ignore="MissingTranslation">A</string>
+    <string name="alphabetic_b" tools:ignore="MissingTranslation">B</string>
+    <string name="alphabetic_c" tools:ignore="MissingTranslation">C</string>
+    <string name="alphabetic_d" tools:ignore="MissingTranslation">D</string>
+    <string name="alphabetic_e" tools:ignore="MissingTranslation">E</string>
+    <string name="alphabetic_f" tools:ignore="MissingTranslation">F</string>
+    <string name="alphabetic_g" tools:ignore="MissingTranslation">G</string>
+
+    <string name="solmization_do" tools:ignore="MissingTranslation">Do</string>
+    <string name="solmization_re" tools:ignore="MissingTranslation">Re</string>
+    <string name="solmization_mi" tools:ignore="MissingTranslation">Mi</string>
+    <string name="solmization_fa" tools:ignore="MissingTranslation">Fa</string>
+    <string name="solmization_sol" tools:ignore="MissingTranslation">Sol</string>
+    <string name="solmization_la" tools:ignore="MissingTranslation">La</string>
+    <string name="solmization_si" tools:ignore="MissingTranslation">Si</string>
+</resources>

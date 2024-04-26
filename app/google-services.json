@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "379238819707",
+    "firebase_url": "https://pianometer.firebaseio.com",
+    "project_id": "pianometer",
+    "storage_bucket": "pianometer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379238819707:android:20825fede6f700a643bfde",
+        "android_client_info": {
+          "package_name": "com.willeypianotuning.toneanalyzer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379238819707-307hvbdc89g7tba6rmtsv5i4hok5n460.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.willeypianotuning.toneanalyzer",
+            "certificate_hash": "63d2adcfb94427028f753d44971000746faaf46d"
+          }
+        },
+        {
+          "client_id": "379238819707-kheasjhjhidla289nk4n4vkph3dqb7gc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.willeypianotuning.toneanalyzer",
+            "certificate_hash": "63d7c0c971cf15c09b05c7db6214b997de5d2e89"
+          }
+        },
+        {
+          "client_id": "379238819707-kl7msngbuav0aktkglk6rvjterbqh793.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqvuv4WfRaTpmEBng2ejFYOnmN4lmP6O4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379238819707-kl7msngbuav0aktkglk6rvjterbqh793.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

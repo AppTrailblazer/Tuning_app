@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="use_alphabetic">false</bool>
+    <bool name="sharp_after_note">true</bool>
+    <string name="sign_sharp">#</string>
+    <integer name="sharp_vertical_position">-1</integer>
+
+    <string name="solmization_do">다</string>
+    <string name="solmization_re">라</string>
+    <string name="solmization_mi">마</string>
+    <string name="solmization_fa">바</string>
+    <string name="solmization_sol">사</string>
+    <string name="solmization_la">가</string>
+    <string name="solmization_si">나</string>
+</resources>

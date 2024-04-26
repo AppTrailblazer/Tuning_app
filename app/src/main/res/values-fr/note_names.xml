@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="use_alphabetic">false</bool>
+
+    <string name="solmization_do">Do</string>
+    <string name="solmization_re">Ré</string>
+    <string name="solmization_mi">Mi</string>
+    <string name="solmization_fa">Fa</string>
+    <string name="solmization_sol">Sol</string>
+    <string name="solmization_la">La</string>
+    <string name="solmization_si">Si</string>
+</resources>

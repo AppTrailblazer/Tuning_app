@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filesMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.willeypianotuning.toneanalyzer.ui.files.FilesActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_color">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="@dimen/actionbar_height"
+            android:layout_height="@dimen/actionbar_height"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/back_arrow_margin_left"
+            android:background="#00ffffff"
+            android:padding="@dimen/back_arrow_padding"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_toStartOf="@+id/searchView"
+            android:layout_toEndOf="@+id/backButton"
+            android:text="@string/activity_open_tuning_file_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/files_title_text_size" />
+
+        <ImageButton
+            android:id="@+id/searchView"
+            android:layout_width="@dimen/actionbar_height"
+            android:layout_height="@dimen/actionbar_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="#00ffffff"
+            android:clickable="true"
+            android:padding="@dimen/search_padding"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_files_search" />
+
+        <RelativeLayout
+            android:id="@+id/searchBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbar_height"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/backButton"
+            android:background="@color/toolbar_color"
+            android:visibility="gone">
+
+            <!-- Stop auto focussing the EditText -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toStartOf="@+id/closeSearchButton"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="@dimen/list_item_text_size"
+                app:background="@drawable/files_search_field_bg" />
+
+            <Button
+                android:id="@+id/searchLabelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/searchEditText"
+                android:layout_alignTop="@+id/searchEditText"
+                android:layout_alignEnd="@+id/searchEditText"
+                android:layout_alignBottom="@+id/searchEditText"
+                android:layout_alignParentEnd="false"
+                android:layout_centerVertical="true"
+                android:background="#00ffffff" />
+
+            <ImageButton
+                android:id="@+id/closeSearchButton"
+                android:layout_width="@dimen/actionbar_height"
+                android:layout_height="@dimen/actionbar_height"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="#00ffffff"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onCloseSearch"
+                android:padding="@dimen/search_padding"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_files_search_close" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/toolbar_color"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/searchButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_search"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/ic_files_select" />
+
+        <TextView
+            android:id="@+id/sortButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_sort"
+            app:drawableTopCompat="@drawable/ic_files_sort" />
+
+        <TextView
+            android:id="@+id/selectAllOrNoneButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_select_all"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/ic_files_select_all" />
+
+        <TextView
+            android:id="@+id/deleteButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_delete"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/ic_files_delete" />
+
+
+        <TextView
+            android:id="@+id/selectButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_select"
+            app:drawableTopCompat="@drawable/ic_files_select" />
+
+        <TextView
+            android:id="@+id/exportButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_export"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/ic_files_export" />
+
+        <TextView
+            android:id="@+id/moreButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/files_list_sq_buttons_height"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/activity_files_action_more"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/ic_files_more" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/tuningsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomMenuLayout"
+        android:layout_below="@+id/toolbarLayout"
+        android:choiceMode="singleChoice"
+        android:divider="@color/semi_white"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="false"
+        android:listSelector="#241302"
+        android:longClickable="false" />
+
+    <FrameLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomMenuLayout"
+        android:layout_below="@+id/toolbarLayout"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/activity_files_no_tunings"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+    </FrameLayout>
+
+</RelativeLayout>

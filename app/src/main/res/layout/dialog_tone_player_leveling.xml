@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/menu_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/dialog_tone_player_volume_and_leveling"
+        android:textAlignment="gravity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textDirection="locale"
+        android:textSize="@dimen/files_title_text_size" />
+
+    <TextView
+        android:id="@+id/mainVolumeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/tone_player_main_volume"
+        android:textAlignment="gravity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textDirection="locale"
+        android:textSize="@dimen/list_item_text_size" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/mainVolumeSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:stepSize="5"
+        android:theme="@style/AppTheme.Material.Slider.Dark"
+        android:value="100"
+        android:valueFrom="0"
+        android:valueTo="100" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginHorizontal="32dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.willeypianotuning.toneanalyzer.ui.main.dialogs.VerticalSlider
+                android:id="@+id/bassVolumeSlider"
+                android:layout_width="24dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                app:vs_cornerRadius="6dp"
+                app:vs_max="100"
+                app:vs_progress="10" />
+
+            <TextView
+                android:id="@+id/bassVolumeValueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:minWidth="44dp"
+                android:paddingTop="8dp"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="14sp"
+                tools:text="10.0" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bassVolumeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="32dp"
+            android:text="@string/tone_player_bass_volume"
+            android:textAlignment="gravity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textDirection="locale"
+            android:textSize="@dimen/list_item_text_size" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/trebleVolumeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="32dp"
+            android:text="@string/tone_player_treble_volume"
+            android:textAlignment="gravity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textDirection="locale"
+            android:textSize="@dimen/list_item_text_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.willeypianotuning.toneanalyzer.ui.main.dialogs.VerticalSlider
+                android:id="@+id/trebleVolumeSlider"
+                android:layout_width="24dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                app:vs_cornerRadius="6dp"
+                app:vs_max="100"
+                app:vs_progress="10" />
+
+            <TextView
+                android:id="@+id/trebleVolumeValueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:minWidth="44dp"
+                android:paddingTop="8dp"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="14sp"
+                tools:text="10.0" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/bassTrebleNotesVolumeSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:stepSize="1"
+        android:theme="@style/AppTheme.Material.Slider.Dark"
+        android:valueFrom="0"
+        android:valueTo="87"
+        app:labelBehavior="visible"
+        app:tickColor="@color/key_white_pressed"
+        app:trackColorActive="@color/key_white"
+        app:trackColorInactive="@color/key_white" />
+
+    <TextView
+        android:id="@+id/bassTrebleNotesVolumeSliderLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/tone_player_treble_bass_cutoff"
+        android:textAlignment="gravity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textDirection="locale"
+        android:textSize="@dimen/list_item_text_size" />
+
+    <LinearLayout
+        android:id="@+id/actionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/buttonNeutral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:text="@string/action_default"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/piano_icons_text_size" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/buttonNegative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?selectableItemBackground"
+            android:text="@string/action_cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/piano_icons_text_size" />
+
+        <Button
+            android:id="@+id/buttonPositive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_apply"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/piano_icons_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>
